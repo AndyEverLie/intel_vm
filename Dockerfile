@@ -15,5 +15,5 @@ RUN echo "su -l -c  'vncserver :2000 -geometry 1280x800' "  >>/luo.sh
 RUN echo 'cd /noVNC-1.2.0' >>/luo.sh
 RUN echo './utils/launch.sh  --vnc localhost:7900 --listen 8900 ' >>/luo.sh
 RUN chmod 755 /luo.sh
-EXPOSE 8900
+EXPOSE 8090
 CMD  /luo.sh
