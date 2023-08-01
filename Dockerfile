@@ -9,11 +9,11 @@ RUN tar -xvf v1.2.0.tar.gz
 RUN mkdir  $HOME/.vnc
 RUN echo 'aa123321!' | vncpasswd -f > $HOME/.vnc/passwd
 RUN chmod 600 $HOME/.vnc/passwd
-RUN echo 'whoami ' >>/luo.sh
-RUN echo 'cd ' >>/luo.sh
-RUN echo "su -l -c  'vncserver :2000 -geometry 1280x800' "  >>/luo.sh
-RUN echo 'cd /noVNC-1.2.0' >>/luo.sh
-RUN echo './utils/launch.sh  --vnc localhost:7900 --listen 8090 ' >>/luo.sh
-RUN chmod 755 /luo.sh
+RUN echo 'whoami ' >>/vm.sh
+RUN echo 'cd ' >>/vm.sh
+RUN echo "su -l -c  'vncserver :2000 -geometry 1280x800' "  >>/vm.sh
+RUN echo 'cd /noVNC-1.2.0' >>/vm.sh
+RUN echo './utils/launch.sh  --vnc localhost:7900 --listen 8090 ' >>/vm.sh
+RUN chmod 755 /vm.sh
 EXPOSE 8090
-CMD  /luo.sh
+CMD  /vm.sh
