@@ -11,7 +11,7 @@ RUN echo 'aa123321!' | vncpasswd -f > $HOME/.vnc/passwd
 RUN chmod 600 $HOME/.vnc/passwd
 RUN echo 'whoami ' >>/vm.sh
 RUN echo 'cd ' >>/vm.sh
-RUN echo "su -l -c  'vncserver :2000 -geometry 1280x800' "  >>/vm.sh
+RUN echo "su -l -c  'vncserver :2000 -geometry 1920x1080' "  >>/vm.sh
 RUN echo 'cd /noVNC-1.2.0' >>/vm.sh
 RUN echo './utils/launch.sh  --vnc localhost:7900 --listen 8090 ' >>/vm.sh
 RUN chmod 755 /vm.sh
